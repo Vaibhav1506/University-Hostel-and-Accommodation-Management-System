@@ -4,7 +4,7 @@ An Oracle SQL and PL/SQL database project for managing university hostel accommo
 
 The implementation includes **14 tables** (12 business tables and 2 technical helpers), **6 views**, **5 integrity triggers**, **21 analytical reports**, and **33 automated SQL assertions**. The sample data is synthetic.
 
-![Hostel accommodation ER diagram](hostel_oracle/er_diagram.png)
+![Detailed hostel accommodation ER diagram](hostel_oracle/er_diagram.png)
 
 ## Project files
 
@@ -20,7 +20,7 @@ The implementation includes **14 tables** (12 business tables and 2 technical he
 | [Database guide](hostel_oracle/README.md) | Design decisions, reporting definitions, business rules, and expected results |
 | [ER diagram details](hostel_oracle/ER_DIAGRAM.md) | Diagram, relationships, and full attributes |
 
-The [assignment problem statement](Database%20Systems%20Lab%20QP%200.pdf) contains only Case Study 6, extracted from original pages 12-13. The SQL installers run directly in the Oracle tools listed below. The ER diagram is provided as a PNG, with the full attribute list in the ER diagram documentation. Local environments and credentials are excluded from Git.
+The [assignment problem statement](Database%20Systems%20Lab%20QP%200.pdf) contains only Case Study 6, extracted from original pages 12-13. The SQL installers run directly in the Oracle tools listed below. The detailed PNG ER diagram includes all 64 business attributes, Oracle data types, keys, required fields, composite unique constraints, and relationship cardinalities. The attribute list is also available in the ER diagram documentation. Local environments and credentials are excluded from Git.
 
 ## Requirements
 

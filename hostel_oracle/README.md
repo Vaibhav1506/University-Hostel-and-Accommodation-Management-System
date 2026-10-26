@@ -2,13 +2,13 @@
 
 This is a proposed design for the University Hostel and Accommodation Management System in the supplied assignment. The assignment requires students to identify and justify their own entities, rules, and priority thresholds. Review and adapt these choices with your team and be ready to explain them.
 
-![Hostel accommodation ER diagram](er_diagram.png)
+![Detailed hostel accommodation ER diagram](er_diagram.png)
 
 ## Files and execution
 
 | File | Purpose |
 |---|---|
-| `er_diagram.png` | Rendered ER diagram showing relationships and primary/foreign keys |
+| `er_diagram.png` | Detailed ER diagram with all 64 business attributes, Oracle data types, keys, required fields, and cardinalities |
 | `ER_DIAGRAM.md` | Full attribute list, keys, and relationship explanation |
 | `01_schema.sql` | 12 business tables, 2 configuration/locking tables, constraints, indexes, and PL/SQL triggers |
 | `02_sample_data.sql` | Synthetic student, allocation, fee, attendance, complaint, visitor, and discipline data |

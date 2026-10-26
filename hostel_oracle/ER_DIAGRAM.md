@@ -1,8 +1,8 @@
 # Hostel accommodation ER diagram
 
-![Hostel accommodation ER diagram](er_diagram.png)
+![Detailed hostel accommodation ER diagram](er_diagram.png)
 
-The diagram shows primary and foreign keys. The full attribute list is retained below.
+The detailed PNG shows all 64 attributes of the 12 business entities, their exact Oracle data types, primary/foreign/unique keys, required fields, and relationship cardinalities. An asterisk marks a required (NOT NULL) attribute. Composite unique constraints appear inside the relevant entity boxes. The attribute list is also retained below as text.
 
 Each child has exactly one parent; each parent may have zero or more children. Student and bed allocations are many over time, with overlapping allocations prohibited.
 

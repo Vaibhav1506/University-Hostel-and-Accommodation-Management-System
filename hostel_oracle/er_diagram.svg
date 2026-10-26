@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1230" height="985" viewBox="0 0 1230 985">
+<title>Hostel accommodation ER diagram</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="449.359375" y="42" font-family="Arial, sans-serif" font-size="20" fill="black">Hostel Accommodation - ER Diagram</text>
+<polyline points="260,140 350,140" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="269.0,146.0 269.0,134.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="275.0,146.0 275.0,134.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="325.0" cy="140.0" r="4" fill="white" stroke="black"/>
+<polyline points="336.0,140.0 350.0,147.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="336.0,140.0 350.0,133.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="570,140 660,140" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="579.0,146.0 579.0,134.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="585.0,146.0 585.0,134.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="635.0" cy="140.0" r="4" fill="white" stroke="black"/>
+<polyline points="646.0,140.0 660.0,147.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="646.0,140.0 660.0,133.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="770,200 770,340" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="764.0,209.0 776.0,209.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="764.0,215.0 776.0,215.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="770.0" cy="315.0" r="4" fill="white" stroke="black"/>
+<polyline points="770.0,326.0 763.0,340.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="770.0,326.0 777.0,340.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="570,400 660,400" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="579.0,406.0 579.0,394.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="585.0,406.0 585.0,394.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="635.0" cy="400.0" r="4" fill="white" stroke="black"/>
+<polyline points="646.0,400.0 660.0,407.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="646.0,400.0 660.0,393.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="350,400 260,400" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="341.0,394.0 341.0,406.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="335.0,394.0 335.0,406.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="285.0" cy="400.0" r="4" fill="white" stroke="black"/>
+<polyline points="274.0,400.0 260.0,393.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="274.0,400.0 260.0,407.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="460,200 460,265 150,265 150,340" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="454.0,209.0 466.0,209.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="454.0,215.0 466.0,215.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="150.0" cy="315.0" r="4" fill="white" stroke="black"/>
+<polyline points="150.0,326.0 143.0,340.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="150.0,326.0 157.0,340.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="150,460 150,600" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="144.0,469.0 156.0,469.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="144.0,475.0 156.0,475.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="150.0" cy="575.0" r="4" fill="white" stroke="black"/>
+<polyline points="150.0,586.0 143.0,600.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="150.0,586.0 157.0,600.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="880,400 970,400" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="889.0,406.0 889.0,394.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="895.0,406.0 895.0,394.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="945.0" cy="400.0" r="4" fill="white" stroke="black"/>
+<polyline points="956.0,400.0 970.0,407.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="956.0,400.0 970.0,393.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="1080,460 1080,600" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="1074.0,469.0 1086.0,469.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="1074.0,475.0 1086.0,475.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="1080.0" cy="575.0" r="4" fill="white" stroke="black"/>
+<polyline points="1080.0,586.0 1073.0,600.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="1080.0,586.0 1087.0,600.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="690,460 690,530 460,530 460,600" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="684.0,469.0 696.0,469.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="684.0,475.0 696.0,475.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="460.0" cy="575.0" r="4" fill="white" stroke="black"/>
+<polyline points="460.0,586.0 453.0,600.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="460.0,586.0 467.0,600.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="800,460 800,600" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="794.0,469.0 806.0,469.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="794.0,475.0 806.0,475.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="800.0" cy="575.0" r="4" fill="white" stroke="black"/>
+<polyline points="800.0,586.0 793.0,600.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="800.0,586.0 807.0,600.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="880,425 925,425 925,860 880,860" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="889.0,431.0 889.0,419.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="895.0,431.0 895.0,419.0" fill="none" stroke="black" stroke-width="1"/>
+<circle cx="905.0" cy="860.0" r="4" fill="white" stroke="black"/>
+<polyline points="894.0,860.0 880.0,853.0" fill="none" stroke="black" stroke-width="1"/>
+<polyline points="894.0,860.0 880.0,867.0" fill="none" stroke="black" stroke-width="1"/>
+<rect x="40" y="80" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="40,115 260,115" fill="none" stroke="black" stroke-width="1"/>
+<text x="119.98828125" y="104" font-family="Arial, sans-serif" font-size="15" fill="black">HOSTEL</text>
+<text x="52" y="139" font-family="Arial, sans-serif" font-size="14" fill="black">PK  hostel_id</text>
+<rect x="350" y="80" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="350,115 570,115" fill="none" stroke="black" stroke-width="1"/>
+<text x="436.671875" y="104" font-family="Arial, sans-serif" font-size="15" fill="black">ROOM</text>
+<text x="362" y="139" font-family="Arial, sans-serif" font-size="14" fill="black">PK  room_id</text>
+<text x="362" y="162" font-family="Arial, sans-serif" font-size="14" fill="black">FK  hostel_id</text>
+<rect x="660" y="80" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="660,115 880,115" fill="none" stroke="black" stroke-width="1"/>
+<text x="754.57421875" y="104" font-family="Arial, sans-serif" font-size="15" fill="black">BED</text>
+<text x="672" y="139" font-family="Arial, sans-serif" font-size="14" fill="black">PK  bed_id</text>
+<text x="672" y="162" font-family="Arial, sans-serif" font-size="14" fill="black">FK  room_id</text>
+<rect x="40" y="340" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="40,375 260,375" fill="none" stroke="black" stroke-width="1"/>
+<text x="106.2421875" y="364" font-family="Arial, sans-serif" font-size="15" fill="black">COMPLAINT</text>
+<text x="52" y="399" font-family="Arial, sans-serif" font-size="14" fill="black">PK  complaint_id</text>
+<text x="52" y="422" font-family="Arial, sans-serif" font-size="14" fill="black">FK  student_id</text>
+<text x="52" y="445" font-family="Arial, sans-serif" font-size="14" fill="black">FK  room_id</text>
+<rect x="350" y="340" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="350,375 570,375" fill="none" stroke="black" stroke-width="1"/>
+<text x="424.57421875" y="364" font-family="Arial, sans-serif" font-size="15" fill="black">STUDENT</text>
+<text x="362" y="399" font-family="Arial, sans-serif" font-size="14" fill="black">PK  student_id</text>
+<rect x="660" y="340" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="660,375 880,375" fill="none" stroke="black" stroke-width="1"/>
+<text x="723.0390625" y="364" font-family="Arial, sans-serif" font-size="15" fill="black">ALLOCATION</text>
+<text x="672" y="399" font-family="Arial, sans-serif" font-size="14" fill="black">PK  allocation_id</text>
+<text x="672" y="422" font-family="Arial, sans-serif" font-size="14" fill="black">FK  student_id</text>
+<text x="672" y="445" font-family="Arial, sans-serif" font-size="14" fill="black">FK  bed_id</text>
+<rect x="970" y="340" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="970,375 1190,375" fill="none" stroke="black" stroke-width="1"/>
+<text x="1029.14453125" y="364" font-family="Arial, sans-serif" font-size="15" fill="black">FEE_CHARGE</text>
+<text x="982" y="399" font-family="Arial, sans-serif" font-size="14" fill="black">PK  charge_id</text>
+<text x="982" y="422" font-family="Arial, sans-serif" font-size="14" fill="black">FK  allocation_id</text>
+<rect x="40" y="600" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="40,635 260,635" fill="none" stroke="black" stroke-width="1"/>
+<text x="55.7890625" y="624" font-family="Arial, sans-serif" font-size="15" fill="black">MAINTENANCE_EXPENSE</text>
+<text x="52" y="659" font-family="Arial, sans-serif" font-size="14" fill="black">PK  expense_id</text>
+<text x="52" y="682" font-family="Arial, sans-serif" font-size="14" fill="black">FK  complaint_id</text>
+<rect x="350" y="600" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="350,635 570,635" fill="none" stroke="black" stroke-width="1"/>
+<text x="409.703125" y="624" font-family="Arial, sans-serif" font-size="15" fill="black">ATTENDANCE</text>
+<text x="362" y="659" font-family="Arial, sans-serif" font-size="14" fill="black">PK  attendance_id</text>
+<text x="362" y="682" font-family="Arial, sans-serif" font-size="14" fill="black">FK  allocation_id</text>
+<rect x="660" y="600" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="660,635 880,635" fill="none" stroke="black" stroke-width="1"/>
+<text x="717.20703125" y="624" font-family="Arial, sans-serif" font-size="15" fill="black">VISITOR_VISIT</text>
+<text x="672" y="659" font-family="Arial, sans-serif" font-size="14" fill="black">PK  visit_id</text>
+<text x="672" y="682" font-family="Arial, sans-serif" font-size="14" fill="black">FK  allocation_id</text>
+<rect x="970" y="600" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="970,635 1190,635" fill="none" stroke="black" stroke-width="1"/>
+<text x="1044.84765625" y="624" font-family="Arial, sans-serif" font-size="15" fill="black">PAYMENT</text>
+<text x="982" y="659" font-family="Arial, sans-serif" font-size="14" fill="black">PK  payment_id</text>
+<text x="982" y="682" font-family="Arial, sans-serif" font-size="14" fill="black">FK  charge_id</text>
+<rect x="660" y="800" width="220" height="120" fill="white" stroke="black"/>
+<polyline points="660,835 880,835" fill="none" stroke="black" stroke-width="1"/>
+<text x="678.4375" y="824" font-family="Arial, sans-serif" font-size="15" fill="black">DISCIPLINARY_INCIDENT</text>
+<text x="672" y="859" font-family="Arial, sans-serif" font-size="14" fill="black">PK  incident_id</text>
+<text x="672" y="882" font-family="Arial, sans-serif" font-size="14" fill="black">FK  allocation_id</text>
+<text x="40" y="962" font-family="Arial, sans-serif" font-size="14" fill="black">PK = primary key    FK = foreign key    || = exactly one    circle + crow&#x27;s foot = zero or many</text>
+</svg>

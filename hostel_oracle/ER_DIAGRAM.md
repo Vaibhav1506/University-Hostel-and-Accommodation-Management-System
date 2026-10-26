@@ -1,10 +1,10 @@
 # Hostel accommodation ER diagram
 
-![Detailed hostel accommodation ER diagram](er_diagram.png)
+![Hostel accommodation ER diagram in Chen notation](er_diagram.png)
 
-The detailed PNG shows all 64 attributes of the 12 business entities, their exact Oracle data types, primary/foreign/unique keys, required fields, and relationship cardinalities. An asterisk marks a required (NOT NULL) attribute. Composite unique constraints appear inside the relevant entity boxes. The attribute list is also retained below as text.
+The PNG uses Chen notation for the 12 business entities: rectangles for entities, ovals for attributes, diamonds for relationships, and underlined primary-key attributes. It shows 52 attribute ovals; the 12 foreign-key fields are represented by relationships. The complete list of 64 schema attributes, including foreign keys, is retained below. Oracle data types and integrity constraints are defined in `01_schema.sql`.
 
-Each child has exactly one parent; each parent may have zero or more children. Student and bed allocations are many over time, with overlapping allocations prohibited.
+Relationships use 1:N cardinalities. A single connecting line marks partial participation, and a double line marks total participation: each child has exactly one parent per relationship, while each parent may have zero or more children. Student and bed allocations are many over time, with overlapping allocations prohibited by SQL integrity rules.
 
 ## Attributes
 

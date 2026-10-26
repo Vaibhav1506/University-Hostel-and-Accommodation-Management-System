@@ -6,7 +6,7 @@ This is an academic design for the supplied case study. Entities, business rules
 
 The implementation includes **14 tables** (12 business tables and 2 technical helpers), **6 views**, **5 integrity triggers**, **21 analytical reports**, and **33 automated SQL assertions**. The sample data is synthetic.
 
-![Detailed hostel accommodation ER diagram](hostel_oracle/er_diagram.png)
+![Hostel accommodation ER diagram in Chen notation](hostel_oracle/er_diagram.png)
 
 ## Project files
 
@@ -19,10 +19,10 @@ The implementation includes **14 tables** (12 business tables and 2 technical he
 | [05_verify.sql](hostel_oracle/05_verify.sql) | 33 assertions and reversible INSERT/UPDATE/DELETE demonstrations |
 | [run_all.sql](hostel_oracle/run_all.sql) | Modular installer |
 | [hostel_complete.sql](hostel_oracle/hostel_complete.sql) | Standalone installer with all SQL included |
-| [Detailed ER diagram](hostel_oracle/er_diagram.png) | All 64 business attributes, Oracle types, keys, required fields, and cardinalities |
+| [ER diagram](hostel_oracle/er_diagram.png) | Chen notation with entity rectangles, attribute ovals, underlined primary keys, relationship diamonds, and cardinalities |
 | [ER diagram details](hostel_oracle/ER_DIAGRAM.md) | Diagram, relationships, and full attributes |
 
-The [assignment problem statement](Database%20Systems%20Lab%20QP%200.pdf) contains only Case Study 6, extracted from original pages 12-13. The SQL installers run directly in the Oracle tools listed below. The detailed PNG ER diagram includes all 64 business attributes, Oracle data types, keys, required fields, composite unique constraints, and relationship cardinalities. The attribute list is also available in the ER diagram documentation. Local environments and credentials are excluded from Git.
+The [assignment problem statement](Database%20Systems%20Lab%20QP%200.pdf) contains only Case Study 6, extracted from original pages 12-13. The SQL installers run directly in the Oracle tools listed below. The PNG ER diagram uses Chen notation for the 12 business entities, with 52 attribute ovals and 12 foreign-key links represented by relationships. The full list of 64 schema attributes is available in the ER diagram documentation; Oracle data types and integrity constraints are defined in `hostel_oracle/01_schema.sql`. Local environments and credentials are excluded from Git.
 
 ## Requirements
 

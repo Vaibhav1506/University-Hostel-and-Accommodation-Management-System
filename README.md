@@ -21,7 +21,7 @@ The implementation includes **14 tables** (12 business tables and 2 technical he
 | [Validation record](hostel_oracle/VALIDATION.md) | Executed checks and their limitations |
 | [ER diagram details](hostel_oracle/ER_DIAGRAM.md) | Relationships, attributes, and editable diagram sources |
 
-The assignment reference PDFs are included at the repository root. Optional Python and PowerShell helpers are in `hostel_oracle/`; they are not required to run the SQL installers. Generated logs, local environments, and credentials are excluded from Git.
+The [assignment problem statement](Database%20Systems%20Lab%20QP%200.pdf) contains only Case Study 6, extracted from original pages 12-13. The SQL installers run directly in the Oracle tools listed below. The optional PowerShell validation helper is in `hostel_oracle/`. The ER diagram is provided as a PNG and editable Mermaid sources. Generated logs, local environments, and credentials are excluded from Git.
 
 ## Requirements
 

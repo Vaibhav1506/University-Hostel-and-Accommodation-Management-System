@@ -1,6 +1,6 @@
 # Hostel accommodation ER diagram
 
-The rendered [PNG](er_diagram.png), [SVG](er_diagram.svg), and [detailed Mermaid source](er_diagram_detailed.mmd) are in this folder.
+The rendered [PNG](er_diagram.png), [simple Mermaid source](er_diagram.mmd), and [detailed Mermaid source](er_diagram_detailed.mmd) are in this folder.
 
 Each child has exactly one parent; each parent may have zero or more children. Student and bed allocations are many over time, with overlapping allocations prohibited.
 

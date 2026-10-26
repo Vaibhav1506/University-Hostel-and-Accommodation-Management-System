@@ -1,4 +1,3 @@
-"""Create a plain, monochrome ER diagram with no external rendering service."""
 from pathlib import Path
 import re
 import math
@@ -56,13 +55,13 @@ def connection(points):
     line(points)
     x,y=points[0]; nx,ny=points[1]
     length=math.hypot(nx-x,ny-y); ux,uy=(nx-x)/length,(ny-y)/length
-    # Parent endpoint: exactly one (two parallel bars).
+
     for distance in (9,15):
         cx,cy=x+distance*ux,y+distance*uy
         line([(cx-6*uy,cy+6*ux),(cx+6*uy,cy-6*ux)])
     x,y=points[-1]; px,py=points[-2]
     length=math.hypot(x-px,y-py); ux,uy=(x-px)/length,(y-py)/length
-    # Child endpoint: optional-many (circle and crow's foot).
+
     circle(x-25*ux,y-25*uy,4)
     junction=(x-14*ux,y-14*uy)
     line([junction,(x-7*uy,y+7*ux)])
@@ -75,18 +74,18 @@ positions = {
     'DISCIPLINARY_INCIDENT':(660,800),
 }
 edges = [
-    [(260,140),(350,140)], # Hostel -> room
-    [(570,140),(660,140)], # Room -> bed
-    [(770,200),(770,340)], # Bed -> allocation
-    [(570,400),(660,400)], # Student -> allocation
-    [(350,400),(260,400)], # Student -> complaint
-    [(460,200),(460,265),(150,265),(150,340)], # Room -> complaint
-    [(150,460),(150,600)], # Complaint -> expense
-    [(880,400),(970,400)], # Allocation -> fee
-    [(1080,460),(1080,600)], # Fee -> payment
-    [(690,460),(690,530),(460,530),(460,600)], # Allocation -> attendance
-    [(800,460),(800,600)], # Allocation -> visit
-    [(880,425),(925,425),(925,860),(880,860)], # Allocation -> discipline
+    [(260,140),(350,140)],
+    [(570,140),(660,140)],
+    [(770,200),(770,340)],
+    [(570,400),(660,400)],
+    [(350,400),(260,400)],
+    [(460,200),(460,265),(150,265),(150,340)],
+    [(150,460),(150,600)],
+    [(880,400),(970,400)],
+    [(1080,460),(1080,600)],
+    [(690,460),(690,530),(460,530),(460,600)],
+    [(800,460),(800,600)],
+    [(880,425),(925,425),(925,860),(880,860)],
 ]
 text(W/2,22,'Hostel Accommodation - ER Diagram',20,True)
 for edge in edges:

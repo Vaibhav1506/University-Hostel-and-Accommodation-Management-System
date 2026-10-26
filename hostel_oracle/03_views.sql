@@ -1,5 +1,3 @@
--- All analytical windows are [window_start, as_of_date).
--- Occupancy is a snapshot at as_of_date; bed serviceability is its current state.
 
 CREATE OR REPLACE VIEW v_current_residence AS
 SELECT a.allocation_id, a.student_id, a.bed_id, b.room_id, r.hostel_id,

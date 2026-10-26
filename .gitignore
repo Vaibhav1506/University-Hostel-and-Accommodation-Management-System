@@ -1,18 +1,15 @@
-# Generated files and local working material
 work/
 logs/
 dist/
 *.log
 *.zip
 
-# Python environments and caches used by optional helpers
 .venv/
 venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 
-# Local credentials and private keys
 .env
 .env.*
 secrets.toml
@@ -23,7 +20,6 @@ wallet/
 *.p12
 *.pfx
 
-# Editor and operating-system files
 .idea/
 .vscode/
 Thumbs.db

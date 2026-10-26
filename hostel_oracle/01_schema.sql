@@ -1,7 +1,3 @@
--- Case Study 6: University Hostel and Accommodation Management
--- Oracle Database 19c or later. Run through run_all.sql or hostel_complete.sql,
--- whose preflight rejects conflicting hostel names before creating objects.
--- No DROP statements are included. Dates in allocations use [start, end).
 
 CREATE TABLE c6_write_lock (
     lock_name VARCHAR2(20) PRIMARY KEY,
@@ -30,7 +26,6 @@ CREATE TABLE student (
     email VARCHAR2(120) NOT NULL UNIQUE,
     phone VARCHAR2(20)
 );
--- A meaningful structure modification required by the assignment.
 ALTER TABLE student ADD emergency_contact VARCHAR2(20);
 
 CREATE TABLE hostel (
@@ -55,7 +50,6 @@ CREATE TABLE bed (
     CONSTRAINT ck_bed_service CHECK (service_status IN ('AVAILABLE', 'OUT_OF_SERVICE')),
     CONSTRAINT uq_bed_room UNIQUE (room_id, bed_no)
 );
--- AVAILABLE here means serviceable, not necessarily vacant.
 
 CREATE TABLE allocation (
     allocation_id NUMBER PRIMARY KEY,
@@ -151,9 +145,6 @@ CREATE INDEX ix_expense_complaint ON maintenance_expense(complaint_id);
 CREATE INDEX ix_visit_allocation ON visitor_visit(allocation_id);
 CREATE INDEX ix_incident_allocation ON disciplinary_incident(allocation_id);
 
--- A database-wide allocation mutex makes validation safe for concurrent DML.
--- This intentionally favors correctness and simplicity over high throughput.
--- Compound trigger AFTER STATEMENT avoids Oracle mutating-table errors.
 CREATE OR REPLACE TRIGGER trg_allocation_guard
 FOR INSERT OR UPDATE OR DELETE ON allocation
 COMPOUND TRIGGER
@@ -219,7 +210,6 @@ BEGIN
 END;
 /
 
--- Serialize both sides of the charge/payment relationship.
 CREATE OR REPLACE TRIGGER trg_payment_guard
 FOR INSERT OR UPDATE OR DELETE ON payment
 COMPOUND TRIGGER

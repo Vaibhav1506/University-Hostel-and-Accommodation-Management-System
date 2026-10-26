@@ -1,6 +1,3 @@
--- SQL*Plus, SQLcl, or Oracle SQL Developer (Run Script / F5).
--- Connect as your project user. Unrelated existing objects are allowed.
--- Never run in SYS or SYSTEM; existing hostel objects are never replaced.
 WHENEVER OSERROR EXIT FAILURE ROLLBACK
 WHENEVER SQLERROR EXIT SQL.SQLCODE ROLLBACK
 SET SERVEROUTPUT ON
@@ -64,4 +61,3 @@ SPOOL hostel_run.log
 COMMIT;
 SPOOL OFF
 PROMPT Installation, assertions, and reports completed.
--- No EXIT: leave the session available for screenshots and exploration.

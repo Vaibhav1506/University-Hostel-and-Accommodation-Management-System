@@ -1,4 +1,3 @@
--- Explicit display settings override wide VARCHAR2 defaults and local login.sql preferences.
 SET LINESIZE 240
 SET WRAP ON
 COLUMN hostel_name FORMAT A20
@@ -99,7 +98,6 @@ SELECT student_id,student_name,complaint_count,unresolved_complaints
 FROM v_student_support_stats WHERE complaint_count>=2 ORDER BY complaint_count DESC;
 
 PROMPT Q14 - CORRELATED SUBQUERY: attendance below the student's own hostel average
--- Only complete attendance records enter the comparison. Student is included in own peer average.
 SELECT s.student_id,s.student_name,s.hostel_name,s.attendance_pct
 FROM v_student_support_stats s
 WHERE s.hostel_id IS NOT NULL AND s.missing_days=0

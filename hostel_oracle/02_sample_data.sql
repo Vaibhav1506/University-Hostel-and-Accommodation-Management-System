@@ -1,4 +1,3 @@
--- Synthetic, reproducible records. No personal data is used.
 INSERT ALL
  INTO hostel VALUES (1, 'H01 - Kaveri', 'North Campus')
  INTO hostel VALUES (2, 'H02 - Krishna', 'East Campus')
@@ -38,7 +37,6 @@ BEGIN
         v_paid := CASE s WHEN 1 THEN 0 WHEN 2 THEN 8000 WHEN 7 THEN 4000
                          WHEN 8 THEN 15000 WHEN 13 THEN 16000 ELSE 18000 END;
         IF v_paid > 0 THEN
-            -- Two receipts per paid charge demonstrate partial payments.
             INSERT INTO payment VALUES (s*10, 1000+s, DATE '2026-09-05', v_paid/2, 'BANK', 'REC-'||s||'-A');
             INSERT INTO payment VALUES (s*10+1, 1000+s, DATE '2026-09-10', v_paid/2, 'UPI', 'REC-'||s||'-B');
         END IF;
@@ -51,7 +49,6 @@ BEGIN
         FOR d IN 0..29 LOOP
             v_status := CASE WHEN d < v_present THEN 'PRESENT' ELSE 'ABSENT' END;
             IF s = 4 AND d < 2 THEN v_status := 'APPROVED_LEAVE'; END IF;
-            -- Student 18 intentionally has two unrecorded days.
             IF NOT (s = 18 AND d >= 28) THEN
                 INSERT INTO attendance VALUES (s*100+d, v_alloc, DATE '2026-09-06'+d, v_status);
             END IF;
@@ -64,11 +61,8 @@ BEGIN
 END;
 /
 
--- History: student 1 transferred from bed 3 to bed 1 on September 1.
 INSERT INTO allocation VALUES (1, 1, 3, DATE '2026-08-01', DATE '2026-09-01');
--- Student 19 has no accommodation: tests LEFT JOIN behavior.
 INSERT INTO student VALUES (19, '26BCE0019', 'Student 19', 'CSE', 'student19@example.edu', NULL, NULL);
--- Physical capacity H03=12, operational capacity=11; one vacant bed is unavailable.
 UPDATE bed SET service_status = 'OUT_OF_SERVICE' WHERE bed_id = 27;
 
 INSERT ALL

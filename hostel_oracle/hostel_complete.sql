@@ -1,6 +1,3 @@
--- SQL*Plus, SQLcl, or Oracle SQL Developer (Run Script / F5).
--- Connect as your project user. Unrelated existing objects are allowed.
--- Never run in SYS or SYSTEM; existing hostel objects are never replaced.
 WHENEVER OSERROR EXIT FAILURE ROLLBACK
 WHENEVER SQLERROR EXIT SQL.SQLCODE ROLLBACK
 SET SERVEROUTPUT ON
@@ -57,11 +54,6 @@ END;
 
 SPOOL hostel_run.log
 
--- BEGIN 01_schema.sql
--- Case Study 6: University Hostel and Accommodation Management
--- Oracle Database 19c or later. Run through run_all.sql or hostel_complete.sql,
--- whose preflight rejects conflicting hostel names before creating objects.
--- No DROP statements are included. Dates in allocations use [start, end).
 
 CREATE TABLE c6_write_lock (
     lock_name VARCHAR2(20) PRIMARY KEY,
@@ -90,7 +82,6 @@ CREATE TABLE student (
     email VARCHAR2(120) NOT NULL UNIQUE,
     phone VARCHAR2(20)
 );
--- A meaningful structure modification required by the assignment.
 ALTER TABLE student ADD emergency_contact VARCHAR2(20);
 
 CREATE TABLE hostel (
@@ -115,7 +106,6 @@ CREATE TABLE bed (
     CONSTRAINT ck_bed_service CHECK (service_status IN ('AVAILABLE', 'OUT_OF_SERVICE')),
     CONSTRAINT uq_bed_room UNIQUE (room_id, bed_no)
 );
--- AVAILABLE here means serviceable, not necessarily vacant.
 
 CREATE TABLE allocation (
     allocation_id NUMBER PRIMARY KEY,
@@ -211,9 +201,6 @@ CREATE INDEX ix_expense_complaint ON maintenance_expense(complaint_id);
 CREATE INDEX ix_visit_allocation ON visitor_visit(allocation_id);
 CREATE INDEX ix_incident_allocation ON disciplinary_incident(allocation_id);
 
--- A database-wide allocation mutex makes validation safe for concurrent DML.
--- This intentionally favors correctness and simplicity over high throughput.
--- Compound trigger AFTER STATEMENT avoids Oracle mutating-table errors.
 CREATE OR REPLACE TRIGGER trg_allocation_guard
 FOR INSERT OR UPDATE OR DELETE ON allocation
 COMPOUND TRIGGER
@@ -279,7 +266,6 @@ BEGIN
 END;
 /
 
--- Serialize both sides of the charge/payment relationship.
 CREATE OR REPLACE TRIGGER trg_payment_guard
 FOR INSERT OR UPDATE OR DELETE ON payment
 COMPOUND TRIGGER
@@ -359,11 +345,8 @@ END;
 
 COMMIT;
 
--- END 01_schema.sql
 
 
--- BEGIN 02_sample_data.sql
--- Synthetic, reproducible records. No personal data is used.
 INSERT ALL
  INTO hostel VALUES (1, 'H01 - Kaveri', 'North Campus')
  INTO hostel VALUES (2, 'H02 - Krishna', 'East Campus')
@@ -403,7 +386,6 @@ BEGIN
         v_paid := CASE s WHEN 1 THEN 0 WHEN 2 THEN 8000 WHEN 7 THEN 4000
                          WHEN 8 THEN 15000 WHEN 13 THEN 16000 ELSE 18000 END;
         IF v_paid > 0 THEN
-            -- Two receipts per paid charge demonstrate partial payments.
             INSERT INTO payment VALUES (s*10, 1000+s, DATE '2026-09-05', v_paid/2, 'BANK', 'REC-'||s||'-A');
             INSERT INTO payment VALUES (s*10+1, 1000+s, DATE '2026-09-10', v_paid/2, 'UPI', 'REC-'||s||'-B');
         END IF;
@@ -416,7 +398,6 @@ BEGIN
         FOR d IN 0..29 LOOP
             v_status := CASE WHEN d < v_present THEN 'PRESENT' ELSE 'ABSENT' END;
             IF s = 4 AND d < 2 THEN v_status := 'APPROVED_LEAVE'; END IF;
-            -- Student 18 intentionally has two unrecorded days.
             IF NOT (s = 18 AND d >= 28) THEN
                 INSERT INTO attendance VALUES (s*100+d, v_alloc, DATE '2026-09-06'+d, v_status);
             END IF;
@@ -429,11 +410,8 @@ BEGIN
 END;
 /
 
--- History: student 1 transferred from bed 3 to bed 1 on September 1.
 INSERT INTO allocation VALUES (1, 1, 3, DATE '2026-08-01', DATE '2026-09-01');
--- Student 19 has no accommodation: tests LEFT JOIN behavior.
 INSERT INTO student VALUES (19, '26BCE0019', 'Student 19', 'CSE', 'student19@example.edu', NULL, NULL);
--- Physical capacity H03=12, operational capacity=11; one vacant bed is unavailable.
 UPDATE bed SET service_status = 'OUT_OF_SERVICE' WHERE bed_id = 27;
 
 INSERT ALL
@@ -468,12 +446,8 @@ INSERT ALL
 SELECT 1 FROM dual;
 COMMIT;
 
--- END 02_sample_data.sql
 
 
--- BEGIN 03_views.sql
--- All analytical windows are [window_start, as_of_date).
--- Occupancy is a snapshot at as_of_date; bed serviceability is its current state.
 
 CREATE OR REPLACE VIEW v_current_residence AS
 SELECT a.allocation_id, a.student_id, a.bed_id, b.room_id, r.hostel_id,
@@ -616,10 +590,8 @@ LEFT JOIN (
     GROUP BY r.hostel_id
 ) m ON m.hostel_id=o.hostel_id;
 
--- END 03_views.sql
 
 
--- BEGIN 05_verify.sql
 SET SERVEROUTPUT ON
 PROMPT Automated assertions: failure stops the script
 DECLARE
@@ -701,7 +673,6 @@ BEGIN
 END;
 /
 
--- Deliberate DML demonstration, rolled back so report totals remain stable.
 PROMPT Successful INSERT / UPDATE / DELETE demonstration
 SAVEPOINT dml_demo;
 INSERT INTO visitor_visit VALUES (9999,101,'Demo Visitor','GUARDIAN',TIMESTAMP '2026-10-05 10:00:00',NULL);
@@ -721,11 +692,8 @@ WHERE name IN (
 )
 ORDER BY name,sequence;
 
--- END 05_verify.sql
 
 
--- BEGIN 04_reports.sql
--- Explicit display settings override wide VARCHAR2 defaults and local login.sql preferences.
 SET LINESIZE 240
 SET WRAP ON
 COLUMN hostel_name FORMAT A20
@@ -826,7 +794,6 @@ SELECT student_id,student_name,complaint_count,unresolved_complaints
 FROM v_student_support_stats WHERE complaint_count>=2 ORDER BY complaint_count DESC;
 
 PROMPT Q14 - CORRELATED SUBQUERY: attendance below the student's own hostel average
--- Only complete attendance records enter the comparison. Student is included in own peer average.
 SELECT s.student_id,s.student_name,s.hostel_name,s.attendance_pct
 FROM v_student_support_stats s
 WHERE s.hostel_id IS NOT NULL AND s.missing_days=0
@@ -875,9 +842,7 @@ SELECT student_id,student_name,hostel_name,risk_status,data_quality,
 FROM v_student_support_risk WHERE risk_status<>'NORMAL'
 ORDER BY CASE risk_status WHEN 'HIGH PRIORITY' THEN 1 ELSE 2 END,risk_score DESC,student_id;
 
--- END 04_reports.sql
 
 COMMIT;
 SPOOL OFF
 PROMPT Installation, assertions, and reports completed.
--- No EXIT: leave the session available for screenshots and exploration.

@@ -1,5 +1,3 @@
-# Optional maintainer validation only. Requires local OS DBA authentication.
-# Creates a uniquely named temporary schema; never targets an existing schema.
 param([ValidateSet('run_all.sql','hostel_complete.sql')][string]$Installer = 'run_all.sql')
 $ErrorActionPreference = 'Stop'
 $sqlplusPath = 'C:\app\bvaib_fee5mh\product\26ai\dbhomeFree\bin\sqlplus.exe'
@@ -44,7 +42,6 @@ EXIT SUCCESS
     Write-Output 'ORACLE VALIDATION SUCCEEDED'
 } finally {
     if ($created) {
-        # This is precisely the random schema created above, not a user-supplied name.
         if ($testUser -notmatch '^C6TEST_[A-F0-9]{12}$') { throw 'Unsafe cleanup identifier.' }
         $cleanupScript = @"
 WHENEVER SQLERROR EXIT SQL.SQLCODE

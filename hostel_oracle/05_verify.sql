@@ -79,7 +79,6 @@ BEGIN
 END;
 /
 
--- Deliberate DML demonstration, rolled back so report totals remain stable.
 PROMPT Successful INSERT / UPDATE / DELETE demonstration
 SAVEPOINT dml_demo;
 INSERT INTO visitor_visit VALUES (9999,101,'Demo Visitor','GUARDIAN',TIMESTAMP '2026-10-05 10:00:00',NULL);

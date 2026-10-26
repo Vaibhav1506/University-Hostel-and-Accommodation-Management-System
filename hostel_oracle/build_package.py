@@ -1,4 +1,3 @@
-"""Rebuild the standalone installer and package the lab deliverables."""
 from pathlib import Path
 import re
 import zipfile
@@ -8,7 +7,7 @@ runner = (root / 'run_all.sql').read_text(encoding='utf-8')
 
 def expand(match):
     name = match[1]
-    return f'\n-- BEGIN {name}\n{(root / name).read_text(encoding="utf-8")}\n-- END {name}\n'
+    return f'\n{(root / name).read_text(encoding="utf-8")}\n'
 
 standalone = re.sub(r'^@@(.+\.sql)$', expand, runner, flags=re.MULTILINE)
 (root / 'hostel_complete.sql').write_text(standalone, encoding='utf-8')

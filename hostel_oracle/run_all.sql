@@ -5,7 +5,6 @@ SET ECHO ON
 SET FEEDBACK ON
 SET PAGESIZE 100
 SET LINESIZE 220
-SET TRIMSPOOL ON
 SET VERIFY OFF
 ALTER SESSION SET NLS_DATE_FORMAT='YYYY-MM-DD';
 ALTER SESSION SET NLS_TIMESTAMP_FORMAT='YYYY-MM-DD HH24:MI:SS';
@@ -52,12 +51,10 @@ BEGIN
 END;
 /
 
-SPOOL hostel_run.log
 @@01_schema.sql
 @@02_sample_data.sql
 @@03_views.sql
 @@05_verify.sql
 @@04_reports.sql
 COMMIT;
-SPOOL OFF
 PROMPT Installation, assertions, and reports completed.

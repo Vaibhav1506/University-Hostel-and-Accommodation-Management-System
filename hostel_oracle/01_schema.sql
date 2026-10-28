@@ -16,6 +16,7 @@ CREATE TABLE report_config (
     CHECK (as_of_date = TRUNC(as_of_date)),
     CHECK (occupancy_benchmark BETWEEN 0 AND 100)
 );
+
 INSERT INTO report_config VALUES (1, DATE '2026-09-06', DATE '2026-10-06', 90);
 
 CREATE TABLE student (
@@ -26,6 +27,7 @@ CREATE TABLE student (
     email VARCHAR2(120) NOT NULL UNIQUE,
     phone VARCHAR2(20)
 );
+
 ALTER TABLE student ADD emergency_contact VARCHAR2(20);
 
 CREATE TABLE hostel (

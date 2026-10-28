@@ -1,8 +1,8 @@
-
 CREATE TABLE c6_write_lock (
     lock_name VARCHAR2(20) PRIMARY KEY,
     token NUMBER DEFAULT 0 NOT NULL
 );
+
 INSERT INTO c6_write_lock(lock_name) VALUES ('ALLOCATION');
 INSERT INTO c6_write_lock(lock_name) VALUES ('FINANCE');
 

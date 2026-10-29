@@ -30,6 +30,7 @@ BEGIN
             'student' || s || '@example.edu', '900000' || LPAD(s, 4, '0'),
             '800000' || LPAD(s, 4, '0')
         );
+        
         v_bed := CASE WHEN s <= 12 THEN s ELSE s + 3 END;
         v_alloc := 100 + s;
         INSERT INTO allocation VALUES (v_alloc, s, v_bed, DATE '2026-09-01', NULL);

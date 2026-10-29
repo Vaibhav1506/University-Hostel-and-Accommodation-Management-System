@@ -97,7 +97,7 @@ PROMPT Q13 - Students with repeated complaints (at least two in the window)
 SELECT student_id,student_name,complaint_count,unresolved_complaints
 FROM v_student_support_stats WHERE complaint_count>=2 ORDER BY complaint_count DESC;
 
-PROMPT Q14 - CORRELATED SUBQUERY: attendance below the student's own hostel average
+PROMPT Q14 - attendance below the students own hostel average
 SELECT s.student_id,s.student_name,s.hostel_name,s.attendance_pct
 FROM v_student_support_stats s
 WHERE s.hostel_id IS NOT NULL AND s.missing_days=0
@@ -109,7 +109,7 @@ ORDER BY s.hostel_id,s.attendance_pct;
 
 PROMPT Q15 - Above-average maintenance expenditure (includes zero-cost hostels)
 SELECT hostel_name,maintenance_cost FROM v_hostel_performance
-WHERE maintenance_cost>(SELECT AVG(maintenance_cost) FROM v_hostel_performance);
+WHERE maintenance_cost > (SELECT AVG(maintenance_cost) FROM v_hostel_performance);
 
 PROMPT Q16 - Repeated disciplinary incidents (at least two in the window)
 SELECT student_id,student_name,disciplinary_incidents
